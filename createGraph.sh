@@ -6,9 +6,10 @@
 # Create bargraph from Covid-19 Data
 #
 
-echo "##################################################"
-echo " Az adatok az előző napi adatból vannak számolva  "
-echo "##################################################"
+echo "######################################################"
+echo "   Az adatok az előző napi adatból vannak számolva    "
+echo " The data are calculated from the previous day's data "
+#echo "######################################################"
 
 declare -a fileNames
 declare -i fileNum
@@ -65,12 +66,12 @@ getData
 
 for (( y=0; y < $fileNum; y++ ))
     do
-        echo -e "\e[39m"
-        echo "################################"
-        echo "${fileNames[$y]}"
-        echo -e "\e[32m Aktív fertözött: ${aktiv[$y]}"
-        echo -e "\e[33m Gyógyultak: ${gyogyult[$y]}"
-        echo -e "\e[35m Elhunytak: ${elhunyt[$y]}"
+        echo -en "\e[39m"
+        echo "######################################################"
+        echo "              ${fileNames[$y]}"
+        echo -e "\e[32m Aktív fertözött - Active infected: ${aktiv[$y]}"
+        echo -e "\e[33m Gyógyultak - Healed: ${gyogyult[$y]}"
+        echo -e "\e[35m Elhunytak - Died: ${elhunyt[$y]}"
 
         la=${aktiv[$y]}
         lg=${gyogyult[$y]}
@@ -84,5 +85,5 @@ for (( y=0; y < $fileNum; y++ ))
     done
 
 echo -ne "\e[39m"
-echo "################################"
+echo "######################################################"
 

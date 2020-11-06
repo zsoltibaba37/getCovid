@@ -1,12 +1,13 @@
 
 ##############################################################
        Az adatok a Wikipedia oldaláról származnak             
+             The data comes from Wikipedia                    
   https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary  
 ##############################################################
-Tegnap: 2020-11-05
-Mai dátum: 2020-11-06
+Tegnap - Yesterday: 2020-11-05
+Mai dátum - Date: 2020-11-06
 ##############################################################
-Aktív fertőzött: 4217
-Gyógyultak: 390
-Elhunytak: 102
+Aktív fertőzött - Active infected: 4217
+Gyógyultak - Healed: 390
+Elhunytak - Died: 102
 ##############################################################
