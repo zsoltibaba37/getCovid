@@ -6,6 +6,10 @@
 # Create bargraph from Covid-19 Data
 #
 
+echo "##################################################"
+echo " Az adatok az előző napi adatból vannak számolva  "
+echo "##################################################"
+
 declare -a fileNames
 declare -i fileNum
 declare -a gyogyult
