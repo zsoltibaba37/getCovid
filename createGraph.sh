@@ -51,7 +51,7 @@ printf_bar() {
  str=$1
  num=$2
  v=$(printf "%-${num}s" "$str")
- echo -e "\e[31m${v// /█}"
+ echo -e "${v// /█}"
 }
 
 
@@ -63,7 +63,7 @@ for (( y=0; y < $fileNum; y++ ))
     do
         echo -e "\e[39m"
         echo "################################"
-        echo " ${fileNames[$y]}"
+        echo "${fileNames[$y]}"
         echo -e "\e[32m Aktív fertözött: ${aktiv[$y]}"
         echo -e "\e[33m Gyógyultak: ${gyogyult[$y]}"
         echo -e "\e[35m Elhunytak: ${elhunyt[$y]}"
@@ -71,11 +71,14 @@ for (( y=0; y < $fileNum; y++ ))
         la=${aktiv[$y]}
         lg=${gyogyult[$y]}
         le=${elhunyt[$y]}
+        echo -ne "\e[32m"
         printf_bar "█" $((la/100))
+        echo -ne "\e[33m"
         printf_bar "█" $((lg/100))
+        echo -ne "\e[35m"
         printf_bar "█" $((le/10))
     done
 
-echo -e "\e[39m"
+echo -ne "\e[39m"
 echo "################################"
 
