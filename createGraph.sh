@@ -31,7 +31,7 @@ getFileNum() {
 getFileNames() {
     for(( i=1; i <= $fileNum; i++ ))
         do
-            fileNames[${#fileNames[@]}]=$(ls -l *.txt | head -$i | tail -n1 | cut -d " " -f12 )
+            fileNames[${#fileNames[@]}]=$(ls -l *.txt | head -$i | tail -n1 | rev | cut -d " " -f1 | rev )
         done
 }
 
