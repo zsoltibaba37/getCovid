@@ -78,7 +78,8 @@ for (( y=0; y < $fileNum; y++ ))
     do
         echo -ne "\e[39m"
         echo "######################################################"
-        echo "              ${fileNames[$y]}"
+        echo "                ${fileNames[$y]}"
+        echo "            Új esetek - New cases"
         echo -e "\e[32m Aktív fertözött - Active infected: ${aktiv[$y]}"
         echo -e "\e[33m Gyógyultak - Healed: ${gyogyult[$y]}"
         echo -e "\e[35m Elhunytak - Died: ${elhunyt[$y]}"
