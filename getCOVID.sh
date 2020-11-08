@@ -1,5 +1,4 @@
 #!/bin/bash
-
 covidData=$(wget -q -O - https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary)
 
 confCases=$(echo "$covidData" | grep -A2 "Confirmed cases in Hungary" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
@@ -21,6 +20,7 @@ recovToday=$(echo "$covidData" | grep -A5 "$datum" | grep "SkyBlue" | cut -d'"' 
 deathsYeste=$(echo "$covidData" | grep -A5 "$lastday<" | grep "#A50026" | cut -d'"' -f2) &&
 deathsToday=$(echo "$covidData" | grep -A5 "$datum<" | grep "#A50026" | cut -d'"' -f2) &&
 
+clear
 echo ""
 echo "##############################################################"
 echo "       Az adatok a Wikipedia oldaláról származnak             "
@@ -44,4 +44,7 @@ echo "Aktív fertőzött - Active infected:" $((activToday-activYeste)) &&
 echo "Gyógyultak - Healed:" $((recovToday-recovYeste)) &&
 echo "Elhunytak - Died:" $((deathsToday-deathsYeste)) &&
 echo "##############################################################"
-
+echo "   Mivel a magyar kormányból senkki nem tette meg. "
+echo "   Én kérek elnézést a hozzátartozóktól "
+echo "   az elveszített családtag - családtagok miatt."
+echo "##############################################################"
