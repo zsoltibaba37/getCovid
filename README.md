@@ -32,8 +32,16 @@ Aktív fertőzött - Active infected: 4369
 Gyógyultak - Healed: 223
 Elhunytak - Died: 81
 ##############################################################
+   Mivel a magyar kormányból senki nem tette meg.
+   Én kérek elnézést a hozzátartozóktól
+   az elveszített családtag - családtagok miatt.
 
- OR
+   Because no one from the Hungarian government did it.
+   I apologize to the relatives for
+   the lost family member - family members.
+##############################################################
+
+ OR use this version
 
 > ./geCOVID.sh > <filname>.txt
 
