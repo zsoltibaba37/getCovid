@@ -54,7 +54,8 @@ The output is colored:
    Az adatok az előző napi adatból vannak számolva
  The data are calculated from the previous day's data
 ######################################################
-              2020-11-03.txt
+                2020-11-03.txt
+            Új esetek - New cases
  Aktív fertözött - Active infected: 3525
  Gyógyultak - Healed: 380
  Elhunytak - Died: 84
@@ -62,7 +63,8 @@ The output is colored:
 ███████
 ███████████████████
 ######################################################
-              2020-11-04.txt
+                2020-11-04.txt
+            Új esetek - New cases
  Aktív fertözött - Active infected: 3753
  Gyógyultak - Healed: 376
  Elhunytak - Died: 90
@@ -70,7 +72,8 @@ The output is colored:
 ███████
 ████████████████████
 ######################################################
-              2020-11-05.txt
+                2020-11-05.txt
+            Új esetek - New cases
  Aktív fertözött - Active infected: 2252
  Gyógyultak - Healed: 1591
  Elhunytak - Died: 85
@@ -78,7 +81,8 @@ The output is colored:
 █████████████████████████████████████
 ███████████████████
 ######################################################
-              2020-11-06.txt
+                2020-11-06.txt
+            Új esetek - New cases
  Aktív fertözött - Active infected: 4217
  Gyógyultak - Healed: 390
  Elhunytak - Died: 102
@@ -86,7 +90,6 @@ The output is colored:
 ███████
 ███████████████████████
 ######################################################
-
 ```
 
 2020
