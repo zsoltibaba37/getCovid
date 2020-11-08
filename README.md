@@ -10,6 +10,31 @@ First use getCOVID.sh to get data from wikipedia.
 I start this script around 12pm daily, or use crontab.
 
 ---------------------------------------------------------------
+> ./getCOVID.sh
+
+##############################################################
+       Az adatok a Wikipedia oldaláról származnak
+             The data comes from Wikipedia
+  https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary
+##############################################################
+  Confirmed cases in Hungary:  109616
+  Active cases in Hungary:     82108
+  Number of recoveries:        25070
+  Number of deaths:            2438
+  Number of home quarantined:  34287
+  Number of samples:           1209151
+##############################################################
+Tegnap - Yesterday: 2020-11-07
+Mai dátum - Date: 2020-11-08
+##############################################################
+                     Új esetek - New cases
+Aktív fertőzött - Active infected: 4369
+Gyógyultak - Healed: 223
+Elhunytak - Died: 81
+##############################################################
+
+ OR
+
 > ./geCOVID.sh > <filname>.txt
 
 ls -l
