@@ -44,11 +44,9 @@ echo "Aktív fertőzött - Active infected:" $((activToday-activYeste)) &&
 echo "Gyógyultak - Healed:" $((recovToday-recovYeste)) &&
 echo "Elhunytak - Died:" $((deathsToday-deathsYeste)) &&
 echo "##############################################################"
-echo "   Mivel a magyar kormányból senki nem tette meg. "
 echo "   Én kérek elnézést a hozzátartozóktól "
 echo "   az elveszített családtag - családtagok miatt."
 echo ""
-echo "   Because no one from the Hungarian government did it."
 echo "   I apologize to the relatives for "
 echo "   the lost family member - family members."
 echo "##############################################################"
