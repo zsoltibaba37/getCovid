@@ -32,12 +32,6 @@ Aktív fertőzött - Active infected: 4369
 Gyógyultak - Healed: 223
 Elhunytak - Died: 81
 ##############################################################
-   Én kérek elnézést a hozzátartozóktól
-   az elveszített családtag - családtagok miatt.
-
-   I apologize to the relatives for
-   the lost family member - family members.
-##############################################################
 
  OR use this version
 
