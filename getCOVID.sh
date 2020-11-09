@@ -20,7 +20,7 @@ recovToday=$(echo "$covidData" | grep -A5 "$datum" | grep "SkyBlue" | cut -d'"' 
 deathsYeste=$(echo "$covidData" | grep -A5 "$lastday<" | grep "#A50026" | cut -d'"' -f2) &&
 deathsToday=$(echo "$covidData" | grep -A5 "$datum<" | grep "#A50026" | cut -d'"' -f2) &&
 
-clear
+#clear
 echo ""
 echo "##############################################################"
 echo "       Az adatok a Wikipedia oldaláról származnak             "
