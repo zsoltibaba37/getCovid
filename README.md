@@ -1,9 +1,11 @@
 # getCovid
 
-- As the Hungarian government does not provide me with adequate data, it misinforms me.
+- I live in Hungary, and want to know correct data from Covid-19 pandemic. 
 - That’s why I did a little script that I run daily and look at the current data.
 
 ## Usage
+- I made two script. The first one is collect data from wikipedia,
+  the second one is made bar graph from '*.txt' files.
 
 ```sh
 First use getCOVID.sh to get data from wikipedia. 
@@ -33,7 +35,7 @@ Gyógyultak - Healed: 223
 Elhunytak - Died: 81
 ##############################################################
 
- OR use this version
+ OR use this version to save actual data to txt file
 
 > ./geCOVID.sh > <filname>.txt
 
