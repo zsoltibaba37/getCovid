@@ -40,9 +40,9 @@ Elhunytak - Died: 81
 > ./geCOVID.sh > <filname>.txt
 
 ls -l
--rw-rw-r-- 1 pzsolti pzsolti  480 nov    3 09:34 2020-11-03.txt
--rw-rw-r-- 1 pzsolti pzsolti  480 nov    4 09:42 2020-11-04.txt
--rw-rw-r-- 1 pzsolti pzsolti  481 nov    5 10:56 2020-11-05.txt
+-rw-rw-r-- 1 user user  480 nov    3 09:34 2020-11-03.txt
+-rw-rw-r-- 1 user user  480 nov    4 09:42 2020-11-04.txt
+-rw-rw-r-- 1 user user  481 nov    5 10:56 2020-11-05.txt
 
 
 ---------------------------------------------------------------
