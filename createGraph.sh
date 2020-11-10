@@ -76,23 +76,30 @@ getData
 
 for (( y=0; y < $fileNum; y++ ))
     do
+
+        la=$(mapValue ${aktiv[$y]} 5000)
+        lg=$(mapValue ${gyogyult[$y]} 2000)
+        le=$(mapValue ${elhunyt[$y]} 200)
         echo -ne "\e[39m"
         echo "######################################################"
         echo "                ${fileNames[$y]}"
         echo "            Új esetek - New cases"
         echo -e "\e[32m Aktív fertözött - Active infected: ${aktiv[$y]}"
-        echo -e "\e[33m Gyógyultak - Healed: ${gyogyult[$y]}"
-        echo -e "\e[35m Elhunytak - Died: ${elhunyt[$y]}"
-
-        la=$(mapValue ${aktiv[$y]} 5000)
-        lg=$(mapValue ${gyogyult[$y]} 2000)
-        le=$(mapValue ${elhunyt[$y]} 200)
-        echo -ne "\e[32m"
+        echo -ne " "
         printf_bar "█" $((la))
-        echo -ne "\e[33m"
+        echo -e "\e[33m Gyógyultak - Healed: ${gyogyult[$y]}"
+        echo -ne " "
         printf_bar "█" $((lg))
-        echo -ne "\e[35m"
+        echo -e "\e[35m Elhunytak - Died: ${elhunyt[$y]}"
+        echo -ne " "
         printf_bar "█" $((le))
+
+        #echo -ne "\e[32m"
+        #printf_bar "█" $((la))
+        #echo -ne "\e[33m"
+        #printf_bar "█" $((lg))
+        #echo -ne "\e[35m"
+        #printf_bar "█" $((le))
     done
 
 echo -ne "\e[39m"
