@@ -21,11 +21,9 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
         1)
-            echo "You select getCOVID"
 	    ./getCOVID.sh
             ;;
         2)
-            echo "You select creategraph"
 	    clear && ./createGraph.sh
             ;;
         "*")
