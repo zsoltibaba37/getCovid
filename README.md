@@ -13,7 +13,7 @@
 ```
 
 <p align="center">
-<img src="https://gtihub.com/zsoltibaba37/getCovid/pisc/pselect.png" width="70%"></p>
+<img src="https://github.com/zsoltibaba37/getCovid/pisc/pselect.png" width="70%"></p>
 <div align="center"><i>pselect window in terminal</i></div>
 
 
