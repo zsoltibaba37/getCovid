@@ -4,8 +4,18 @@
 - That’s why I did a little script that I run daily and look at the current data.
 
 ## Usage
+- Made a pselect script, which is help you to start selected script.
 - I made two script. The first one is collect data from wikipedia,
   the second one is made bar graph from '*.txt' files.
+
+```sh
+> ./pselect
+```
+
+<p align="center">
+<img src="pisc/pselect.png" width="70%"></p>
+<div align="center"><i>pselect window in terminal</i></div>
+
 
 ```sh
 First use getCOVID.sh to get data from wikipedia. 
