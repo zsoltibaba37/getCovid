@@ -7,11 +7,12 @@ covidData=$(wget -q -O - https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hung
 
 activToday=$(echo "$covidData" | grep -A5 "$datum" | grep "Tomato" | cut -d'"' -f2) &&
 
-if [ -z "$activToday"]
-    then
-        echo "There is no new data on the wikipedia site."
-        exit 0
+if [ -z "$activToday" ]
+then
+    echo "There is no new data on the wikipedia site."
+    exit 0
 fi
+
 activYeste=$(echo "$covidData" | grep -A5 "$lastday" | grep "Tomato" | cut -d'"' -f2) &&
 
 recovYeste=$(echo "$covidData" | grep -A5 "$lastday" | grep "SkyBlue" | cut -d'"' -f2) &&
