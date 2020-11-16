@@ -1,16 +1,9 @@
 #!/bin/bash
-covidData=$(wget -q -O - https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary)
-
-confCases=$(echo "$covidData" | grep -A2 "Confirmed cases in Hungary" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
-activeCases=$(echo "$covidData" | grep -A2 "Active cases in Hungary" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
-numOfRecov=$(echo "$covidData" | grep -A2 "Number of recoveries" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
-numOfDeaths=$(echo "$covidData" | grep -A2 "Number of deaths" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
-numOfQuar=$(echo "$covidData" | grep -A2 "Number of home quarantined" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
-numOfSamp=$(echo "$covidData" | grep -A2 "Number of samples" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
 
 lastday=$(date +%Y-%m-%d -d "yesterday") &&
 datum=$(date +%Y-%m-%d) &&
 
+covidData=$(wget -q -O - https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary)
 
 activToday=$(echo "$covidData" | grep -A5 "$datum" | grep "Tomato" | cut -d'"' -f2) &&
 
@@ -27,6 +20,13 @@ recovToday=$(echo "$covidData" | grep -A5 "$datum" | grep "SkyBlue" | cut -d'"' 
 deathsYeste=$(echo "$covidData" | grep -A5 "$lastday<" | grep "#A50026" | cut -d'"' -f2) &&
 deathsToday=$(echo "$covidData" | grep -A5 "$datum<" | grep "#A50026" | cut -d'"' -f2) &&
 
+confCases=$(echo "$covidData" | grep -A2 "Confirmed cases in Hungary" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
+activeCases=$(echo "$covidData" | grep -A2 "Active cases in Hungary" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
+numOfRecov=$(echo "$covidData" | grep -A2 "Number of recoveries" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
+numOfDeaths=$(echo "$covidData" | grep -A2 "Number of deaths" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
+numOfQuar=$(echo "$covidData" | grep -A2 "Number of home quarantined" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
+numOfSamp=$(echo "$covidData" | grep -A2 "Number of samples" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
+
 #clear
 echo ""
 echo "##############################################################"
@@ -40,8 +40,6 @@ echo "  Number of recoveries:       " $numOfRecov &&
 echo "  Number of deaths:           " $numOfDeaths &&
 echo "  Number of home quarantined: " $numOfQuar &&
 echo "  Number of samples:          " $numOfSamp &&
-
-
 echo "##############################################################"
 echo "Tegnap - Yesterday:" $lastday &&
 echo "Mai dátum - Date:" $datum &&
