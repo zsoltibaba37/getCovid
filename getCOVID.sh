@@ -11,8 +11,15 @@ numOfSamp=$(echo "$covidData" | grep -A2 "Number of samples" | tail -1 | rev | c
 lastday=$(date +%Y-%m-%d -d "yesterday") &&
 datum=$(date +%Y-%m-%d) &&
 
-activYeste=$(echo "$covidData" | grep -A5 "$lastday" | grep "Tomato" | cut -d'"' -f2) &&
+
 activToday=$(echo "$covidData" | grep -A5 "$datum" | grep "Tomato" | cut -d'"' -f2) &&
+
+if [ -z "$activToday"]
+    then
+        echo "There is no new data on the wikipedia site."
+        exit 0
+fi
+activYeste=$(echo "$covidData" | grep -A5 "$lastday" | grep "Tomato" | cut -d'"' -f2) &&
 
 recovYeste=$(echo "$covidData" | grep -A5 "$lastday" | grep "SkyBlue" | cut -d'"' -f2) &&
 recovToday=$(echo "$covidData" | grep -A5 "$datum" | grep "SkyBlue" | cut -d'"' -f2) &&
