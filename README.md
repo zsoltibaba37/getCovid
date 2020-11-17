@@ -47,7 +47,7 @@ Elhunytak - Died: 81
 
  OR use this version to save actual data to txt file
 
-> ./geCOVID.sh > <filname>.txt
+> ./geCOVID.sh > data/<filname>.txt
 
 ls -l
 -rw-rw-r-- 1 user user  480 nov    3 09:34 2020-11-03.txt
@@ -56,51 +56,41 @@ ls -l
 
 
 ---------------------------------------------------------------
-If a few file is available, use createGraph.sh
+If a few file is available in data folder, use createGraph.sh
 
 > ./createGraph.sh
 
 The output is colored:
-
 ######################################################
    Az adatok az előző napi adatból vannak számolva
  The data are calculated from the previous day's data
 ######################################################
-                2020-11-03.txt
+                data/2020-11-03.txt
             Új esetek - New cases
  Aktív fertözött - Active infected: 3525
+ █████████████████████████████████
  Gyógyultak - Healed: 380
+ ███████
  Elhunytak - Died: 84
-█████████████████████████████████
-███████
-███████████████████
+ ███████████████████
 ######################################################
-                2020-11-04.txt
+                data/2020-11-04.txt
             Új esetek - New cases
  Aktív fertözött - Active infected: 3753
+ ███████████████████████████████████
  Gyógyultak - Healed: 376
+ ███████
  Elhunytak - Died: 90
-███████████████████████████████████
-███████
-████████████████████
+ ████████████████████
 ######################################################
-                2020-11-05.txt
+                data/2020-11-05.txt
             Új esetek - New cases
  Aktív fertözött - Active infected: 2252
+ ████████████████████
  Gyógyultak - Healed: 1591
+ █████████████████████████████████████
  Elhunytak - Died: 85
-████████████████████
-█████████████████████████████████████
-███████████████████
-######################################################
-                2020-11-06.txt
-            Új esetek - New cases
- Aktív fertözött - Active infected: 4217
- Gyógyultak - Healed: 390
- Elhunytak - Died: 102
-████████████████████████████████████████
-███████
-███████████████████████
+ ███████████████████
 ######################################################
 ```
 
