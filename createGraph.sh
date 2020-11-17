@@ -21,7 +21,7 @@ declare -a elhunyt
 # How many txt file in the folder
 #
 getFileNum() {
-    fileNum=$( ls -ltrH *.txt | wc -l )
+    fileNum=$( ls -ltrH data/*.txt | wc -l )
 }
 
 
@@ -31,7 +31,7 @@ getFileNum() {
 getFileNames() {
     for(( i=1; i <= $fileNum; i++ ))
         do
-            fileNames[${#fileNames[@]}]=$(ls -l *.txt | head -$i | tail -n1 | rev | cut -d " " -f1 | rev )
+            fileNames[${#fileNames[@]}]=$(ls -l data/*.txt | head -$i | tail -n1 | rev | cut -d " " -f1 | rev )
         done
 }
 
