@@ -72,9 +72,9 @@ print(f" Number of recoveries:    {recTA}")
 print(f" Number of deaths:        {deaTA}")
 print("#"*c)
 print("New cases    ".center(c))
-print(f" Active infected:         {Nact}")
-print(f" Healed:                  {Nrec}")
-print(f" Died:                    {Ndea}")
+print(f" Active infected - Aktív: {Nact}")
+print(f" Healed - Gyógyultak:     {Nrec}")
+print(f" Died - Elhunytak:        {Ndea}")
 print("#"*c)
 
 
