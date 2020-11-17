@@ -1,5 +1,19 @@
 #!/bin/bash
-terminal=`ps | tail -n 1 | rev | cut -d " " -f6 | rev`
+
+if [ -z "$1" ]
+    then
+     echo "Missing argument ! ! !"
+     echo "use ps command"
+     echo "> ps
+     PID TTY          TIME CMD
+      10 pts/0    00:00:01 bash"
+     echo "Usage: ./pselect <terminal>"
+     echo ""
+     echo " In this case use pts/0"
+     exit
+fi
+terminal=$1
+#terminal=`ps | tail -n 1 | rev | cut -d " " -f6 | rev`
 HEIGHT=15
 WIDTH=90
 CHOICE_HEIGHT=13
