@@ -58,7 +58,7 @@ ls -l
 ---------------------------------------------------------------
 If a few file is available in data folder, use createGraph.sh
 
-> ./createGraph.sh
+> ./createGraph.sh pts/0
 
 The output is colored:
 ######################################################
