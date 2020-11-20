@@ -1,9 +1,9 @@
 #!/bin/bash
 
+covidData=$(wget -q -O - https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary)
+
 lastday=$(date +%Y-%m-%d -d "yesterday") &&
 datum=$(date +%Y-%m-%d) &&
-
-covidData=$(wget -q -O - https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary)
 
 activToday=$(echo "$covidData" | grep -A5 "$datum" | grep "Tomato" | cut -d'"' -f2) &&
 
@@ -27,8 +27,12 @@ numOfRecov=$(echo "$covidData" | grep -A2 "Number of recoveries" | tail -1 | rev
 numOfDeaths=$(echo "$covidData" | grep -A2 "Number of deaths" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
 numOfQuar=$(echo "$covidData" | grep -A2 "Number of home quarantined" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
 numOfSamp=$(echo "$covidData" | grep -A2 "Number of samples" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
+vent=$(echo "$covidData" | grep -B10 'rowspan="2"' | grep '<td>' | rev | cut -d">" -f1 | rev | cut -d " " -f10)
+numVent=$(echo $vent | rev | cut -d " " -f1 | rev)
+hosp=$(echo "$covidData" | grep -B10 'rowspan="2"' | grep '<td>' | rev | cut -d">" -f1 | rev | cut -d " " -f10)
+numHosp=$(echo $vent | rev | cut -d " " -f2 | rev)
 
-#clear
+# Print data
 echo ""
 echo "##############################################################"
 echo "       Az adatok a Wikipedia oldaláról származnak             "
@@ -41,6 +45,9 @@ echo "  Number of recoveries:       " $numOfRecov &&
 echo "  Number of deaths:           " $numOfDeaths &&
 echo "  Number of home quarantined: " $numOfQuar &&
 echo "  Number of samples:          " $numOfSamp &&
+echo "  Hospitalized:               " $numHosp &&
+echo "  Ventilated:                 " $numVent &&
+
 echo "##############################################################"
 echo "Tegnap - Yesterday:" $lastday &&
 echo "Mai dátum - Date:" $datum &&
