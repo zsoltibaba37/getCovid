@@ -8,9 +8,6 @@
 - I made two script. The first one is collect data from wikipedia,
   the second one is made bar graph from '*.txt' files.
 
-```sh
-> ./pselect
-```
 
 <p align="center">
 <img src="https://github.com/zsoltibaba37/getCovid/blob/master/pics/pselect.png" width="70%"></p>
