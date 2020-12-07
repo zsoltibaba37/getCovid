@@ -1,0 +1,23 @@
+
+##############################################################
+       Az adatok a Wikipedia oldaláról származnak             
+             The data comes from Wikipedia                    
+  https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary  
+##############################################################
+  Confirmed cases in Hungary:  254148
+  Active cases in Hungary:     173881
+  Number of recoveries:        74283
+  Number of deaths:            5984
+  Number of home quarantined:  51485
+  Number of samples:           1963148
+  Hospitalized:                7932
+  Ventilated:                  674
+##############################################################
+Tegnap - Yesterday: 2020-12-06
+Mai dátum - Date: 2020-12-07
+##############################################################
+                     Új esetek - New cases
+Aktív fertőzött - Active infected: 1153
+Gyógyultak - Healed: 2601
+Elhunytak - Died: 116
+##############################################################
