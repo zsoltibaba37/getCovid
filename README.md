@@ -16,24 +16,26 @@ I start this script around 12pm daily, or use crontab.
 > ./getCOVID.sh
 
 ##############################################################
-       Az adatok a Wikipedia oldaláról származnak
-             The data comes from Wikipedia
-  https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary
+       Az adatok a Wikipedia oldaláról származnak             
+             The data comes from Wikipedia                    
+  https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary  
 ##############################################################
-  Confirmed cases in Hungary:  109616
-  Active cases in Hungary:     82108
-  Number of recoveries:        25070
-  Number of deaths:            2438
-  Number of home quarantined:  34287
-  Number of samples:           1209151
+  Confirmed cases in Hungary:  814409                         
+  Active cases in Hungary:     5798                           
+  Number of recoveries:        778531                         
+  Number of deaths:            30080                          
+  Number of home quarantined:  2563                           
+  Number of PCR samples:       6664898                        
+  Hospitalized:                215                            
+  Ventilated:                  26                             
 ##############################################################
-Tegnap - Yesterday: 2020-11-07
-Mai dátum - Date: 2020-11-08
+Tegnap - Yesterday: 2021-09-08                                
+Mai dátum - Date: 2021-09-09                                  
 ##############################################################
-                     Új esetek - New cases
-Aktív fertőzött - Active infected: 4369
-Gyógyultak - Healed: 223
-Elhunytak - Died: 81
+                     Új esetek - New cases                    
+Aktív fertőzött - Active infected: 212                        
+Gyógyultak - Healed: 130                                      
+Elhunytak - Died: 3                                           
 ##############################################################
 
  OR use this version to save actual data to txt file
@@ -85,4 +87,5 @@ The output is colored:
 ######################################################
 ```
 
-2021-03-01
+
+2021-09-09
