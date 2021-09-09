@@ -5,7 +5,8 @@ covidData=$(wget -q -O - https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hung
 lastday=$(date +%Y-%m-%d -d "yesterday") &&
 datum=$(date +%Y-%m-%d) &&
 
-activToday=$(echo "$covidData" | grep -A5 "$datum" | grep "Tomato" | cut -d'"' -f2) &&
+#activToday=$(echo "$covidData" | grep -A5 "$datum" | grep "Tomato" | cut -d'"' -f2) &&
+activToday=$(echo "$covidData" | grep -A5 "$datum" | grep "bb-b" | cut -d '"' -f16) &&
 
 if [ -z "$activToday" ]
 then
@@ -13,20 +14,30 @@ then
     exit 0
 fi
 
-activYeste=$(echo "$covidData" | grep -A5 "$lastday" | grep "Tomato" | cut -d'"' -f2) &&
+#activYeste=$(echo "$covidData" | grep -A5 "$lastday" | grep "Tomato" | cut -d'"' -f2) &&
+activYeste=$(echo "$covidData" | grep -A5 "$lastday" | grep "bb-b" | cut -d '"' -f16) &&
 
-recovYeste=$(echo "$covidData" | grep -A5 "$lastday" | grep "SkyBlue" | cut -d'"' -f2) &&
-recovToday=$(echo "$covidData" | grep -A5 "$datum" | grep "SkyBlue" | cut -d'"' -f2) &&
+#recovYeste=$(echo "$covidData" | grep -A5 "$lastday" | grep "SkyBlue" | cut -d'"' -f2) &&
+recovYeste=$(echo "$covidData" | grep -A5 "$lastday" | grep "bb-b" | cut -d '"' -f10) &&
 
-deathsYeste=$(echo "$covidData" | grep -A5 "$lastday<" | grep "#A50026" | cut -d'"' -f2) &&
-deathsToday=$(echo "$covidData" | grep -A5 "$datum<" | grep "#A50026" | cut -d'"' -f2) &&
+#recovToday=$(echo "$covidData" | grep -A5 "$datum" | grep "SkyBlue" | cut -d'"' -f2) &&
+recovToday=$(echo "$covidData" | grep -A5 "$datum" | grep "bb-b" | cut -d '"' -f10) &&
+
+
+
+# deathsYeste=$(echo "$covidData" | grep -A5 "$lastday<" | grep "#A50026" | cut -d'"' -f2) &&
+deathsYeste=$(echo "$covidData" | grep -A5 "$lastday" | grep "bb-b" | cut -d '"' -f4) &&
+# deathsToday=$(echo "$covidData" | grep -A5 "$datum<" | grep "#A50026" | cut -d'"' -f2) &&
+deathsToday=$(echo "$covidData" | grep -A5 "$datum" | grep "bb-b" | cut -d '"' -f4) &&
+
+
 
 confCases=$(echo "$covidData" | grep -A2 "Confirmed cases in Hungary" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
 activeCases=$(echo "$covidData" | grep -A2 "Active cases in Hungary" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
 numOfRecov=$(echo "$covidData" | grep -A2 "Number of recoveries" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
 numOfDeaths=$(echo "$covidData" | grep -A2 "Number of deaths" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
 numOfQuar=$(echo "$covidData" | grep -A2 "Number of home quarantined" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
-numOfSamp=$(echo "$covidData" | grep -A2 "Number of samples" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
+numOfSamp=$(echo "$covidData" | grep -A2 "Number of PCR samples" | tail -1 | rev | cut -d">" -f1 | rev | sed -r 's/,//g')
 vent=$(echo "$covidData" | grep -B10 'rowspan="2"' | grep '<td>' | rev | cut -d">" -f1 | rev | cut -d " " -f10)
 numVent=$(echo $vent | rev | cut -d " " -f1 | rev)
 hosp=$(echo "$covidData" | grep -B10 'rowspan="2"' | grep '<td>' | rev | cut -d">" -f1 | rev | cut -d " " -f10)
@@ -44,7 +55,7 @@ echo "  Active cases in Hungary:    " $activeCases &&
 echo "  Number of recoveries:       " $numOfRecov &&
 echo "  Number of deaths:           " $numOfDeaths &&
 echo "  Number of home quarantined: " $numOfQuar &&
-echo "  Number of samples:          " $numOfSamp &&
+echo "  Number of PCR samples:      " $numOfSamp &&
 echo "  Hospitalized:               " $numHosp &&
 echo "  Ventilated:                 " $numVent &&
 
