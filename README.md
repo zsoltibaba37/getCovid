@@ -56,7 +56,7 @@ If a few file is available in data folder, use createGraph.sh
 The output is colored:
 ######################################################
    Az adatok az előző napi adatból vannak számolva
- The data are calculated from the previous day's data
+ The data are calculated from the previous days data
 ######################################################
                 data/2020-11-03.txt
             Új esetek - New cases

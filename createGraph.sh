@@ -8,7 +8,7 @@
 clear
 echo "######################################################"
 echo "   Az adatok az előző napi adatból vannak számolva    "
-echo " The data are calculated from the previous day's data "
+echo " The data are calculated from the previous days data  "
 #echo "######################################################"
 
 declare -a fileNames
