@@ -61,7 +61,7 @@ echo "  Ventilated:                 " $numVent &&
 
 echo "##############################################################"
 echo "Tegnap - Yesterday:" $lastday &&
-echo "Mai dátum - Date:" $datum &&
+echo "Ma - Today:        " $datum &&
 echo "##############################################################"
 echo "                     Új esetek - New cases"
 echo "Aktív fertőzött - Active infected:" $((activToday-activYeste)) &&
