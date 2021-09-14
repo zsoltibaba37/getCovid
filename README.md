@@ -30,7 +30,7 @@ I start this script around 12pm daily, or use crontab.
   Ventilated:                  26                             
 ##############################################################
 Tegnap - Yesterday: 2021-09-08                                
-Mai dátum - Date: 2021-09-09                                  
+Ma - Today:         2021-09-09                                  
 ##############################################################
                      Új esetek - New cases                    
 Aktív fertőzött - Active infected: 212                        
