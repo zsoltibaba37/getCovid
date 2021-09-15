@@ -1,0 +1,23 @@
+
+##############################################################
+       Az adatok a Wikipedia oldaláról származnak             
+             The data comes from Wikipedia                    
+  https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary  
+##############################################################
+  Confirmed cases in Hungary:  816222
+  Active cases in Hungary:     6858
+  Number of recoveries:        779250
+  Number of deaths:            30114
+  Number of home quarantined:  3286
+  Number of PCR samples:       6737713
+  Hospitalized:                307
+  Ventilated:                  40
+##############################################################
+Tegnap - Yesterday: 2021-09-14
+Ma - Today:         2021-09-15
+##############################################################
+                     Új esetek - New cases
+Aktív fertőzött - Active infected: 223
+Gyógyultak - Healed: 136
+Elhunytak - Died: 12
+##############################################################
