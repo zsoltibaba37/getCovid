@@ -40,7 +40,7 @@ Elhunytak - Died: 3
 
  OR use this version to save actual data to txt file
 
-> ./geCOVID.sh > data/<filname>.txt
+> ./geCOVID.sh > data/<filename>.txt
 
 ls -l
 -rw-rw-r-- 1 user user  480 nov    3 09:34 2020-11-03.txt
