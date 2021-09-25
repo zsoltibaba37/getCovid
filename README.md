@@ -1,9 +1,14 @@
 # getCovid
 
+- 2021 - My dear government can't serve data in weekend :-)
+
 - I live in Hungary, and want to know correct data from Covid-19 pandemic. 
 - That’s why I did a little script that I run daily and look at the current data.
 
 ## Usage
+
+- 2021 - The python version collect only the base datas.
+
 - I made two script. The first one is collect data from wikipedia,
   the second one is made bar graph from '*.txt' files.
 
@@ -88,4 +93,4 @@ The output is colored:
 ```
 
 
-2021-09-09
+2021-09-25
