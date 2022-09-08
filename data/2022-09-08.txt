@@ -1,0 +1,16 @@
+##############################################################
+             The data comes from Wikipedia                    
+  https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary  
+##############################################################
+  Last update: 7 Sep 2022 8:42 CEST
+##############################################################
+  Confirmed cases in Hungary        : 2058847
+  Active cases in Hungary           : 34672
+  Number of recoveries              : 1976808
+  Number of deaths                  : 47367
+  Number of home quarantined        : 2371
+  Number of PCR samples             : 11394556
+  Number of partially vaccinated    : 6416883
+  Number of fully vaccinated        : 3894295
+##############################################################
+
