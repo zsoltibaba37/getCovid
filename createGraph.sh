@@ -6,9 +6,9 @@
 # Create bargraph from Covid-19 Data
 #
 clear
-echo "######################################################"
-echo "   Az adatok az előző napi adatból vannak számolva    "
-echo " The data are calculated from the previous days data  "
+echo "#########################################################"
+echo "   Az adatok nem az előző napi adatból vannak számolva   "
+echo " The data are not calculated from the previous days data "
 #echo "######################################################"
 
 declare -a fileNames
@@ -63,7 +63,7 @@ printf_bar() {
 # Map value 5000 -> 50
 #
 mapValue() {
-	f=$1
+    f=$1
     t=$2
     res=$(($f*50/$t))
     echo $res
@@ -78,12 +78,12 @@ for (( y=0; y < $fileNum; y++ ))
     do
 
         la=$(mapValue ${aktiv[$y]} 5000)
-        lg=$(mapValue ${gyogyult[$y]} 2000)
+        lg=$(mapValue ${gyogyult[$y]} 6000)
         le=$(mapValue ${elhunyt[$y]} 200)
         echo -ne "\e[39m"
-        echo "######################################################"
-        echo "                ${fileNames[$y]}"
-        echo "            Új esetek - New cases"
+        echo "#########################################################"
+        echo "                  ${fileNames[$y]}"
+        echo "               Új esetek - New cases"
         echo -e "\e[32m Aktív fertözött - Active infected: ${aktiv[$y]}"
         echo -ne " "
         printf_bar "█" $((la))
@@ -103,5 +103,5 @@ for (( y=0; y < $fileNum; y++ ))
     done
 
 echo -ne "\e[39m"
-echo "######################################################"
+echo "#########################################################"
 
