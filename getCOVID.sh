@@ -1,6 +1,6 @@
 #!/bin/bash
 
-covidData=$(wget -q -O - https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary)
+covidData=$(wget --inet4-only -q -O - https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Hungary)
 
 #lastday=$(date +%Y-%m-%d -d "yesterday") &&
 #datum=$(date +%Y-%m-%d) &&
