@@ -1,8 +1,9 @@
 # getCovid
 
+- 2022 - The  dear government provides data every other week :-))
 - 2021 - My dear government can't serve data in weekend :-)
 
-- I live in Hungary, and want to know correct data from Covid-19 pandemic. 
+- I live in Hungary, and want to know correct data from Covid-19 pandemic.
 - That’s why I did a little script that I run daily and look at the current data.
 
 ## Usage
@@ -14,7 +15,7 @@
 
 
 ```sh
-First use getCOVID.sh to get data from wikipedia. 
+First use getCOVID.sh to get data from wikipedia.
 I start this script around 12pm daily, or use crontab.
 
 ---------------------------------------------------------------
@@ -92,5 +93,5 @@ The output is colored:
 ######################################################
 ```
 
-
+2022-09-27
 2021-09-25
